@@ -1,4 +1,7 @@
-#Exercicio curso udemy de python 1°
+#Faça um programa na qual mostre o seu nome, mostre os seu nome invertido, se contém ou não espaços 
+#informe a primeira e última letra do seu nome e caso o usuário deixar campos vazios informar: 
+#'você deixou campos vázios.'
+
 
 nome = input('Digite o seu nome: ')
 idade = input('Digite a sua idade: ')
