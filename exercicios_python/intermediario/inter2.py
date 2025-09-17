@@ -41,4 +41,4 @@ while escolha_usuario:
     else:
         escolha_usuario = False
 
-print('Você usou a calculadora usando while.')
+print('Você usou a calculadora em while.')
