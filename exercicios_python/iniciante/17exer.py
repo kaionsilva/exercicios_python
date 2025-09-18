@@ -1,5 +1,5 @@
 """
-Faça um Programa que leia três números e mostre-os em ordem decrescente.
+Faça um Programa que leia três números e mostre-os em ordem crescente.
 """
 
 primeiro_numero = int(input('Primeiro número: '))
