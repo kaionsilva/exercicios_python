@@ -17,3 +17,38 @@ seguinte critério, baseado no salário atual:
         o valor do aumento;
         o novo salário, após o aumento.
 """
+
+salario_colaborador = float(input('Digite o seu salário: '))
+
+if salario_colaborador < 280:
+    print(f'Salário antes do reajuste: {salario_colaborador:.2f}')
+    print('Você teve um aumento de 20% em seu salário.')
+    valor_aumentado = salario_colaborador * (20 / 100)
+    print(f'Valor do aumento: {valor_aumentado:.2f}')
+    salario_colaborador = salario_colaborador + valor_aumentado
+    print(f'Novo salário após aumento: {salario_colaborador:.2f}')
+
+elif salario_colaborador >= 280 and salario_colaborador < 700:
+    print(f'Salário antes do reajuste: {salario_colaborador:.2f}')
+    print('Você teve um aumento de 15% em seu salário.')
+    valor_aumentado = salario_colaborador * (15 / 100)
+    print(f'Valor do aumento: {valor_aumentado:.2f}')
+    salario_colaborador = salario_colaborador + valor_aumentado
+    print(f'Novo salário após aumento: {salario_colaborador:.2f}')
+
+elif salario_colaborador > 700 and salario_colaborador <= 1500:
+    print(f'Salário antes do reajuste: {salario_colaborador:.2f}')
+    print('Você teve um aumento de 10% em seu salário.')
+    valor_aumentado = salario_colaborador * (10 / 100)
+    print(f'Valor do aumento: {valor_aumentado:.2f}')
+    salario_colaborador = salario_colaborador + valor_aumentado
+    print(f'Novo salário após aumento: {salario_colaborador:.2f}')
+
+elif salario_colaborador > 1500:
+    print(f'Salário antes do reajuste: {salario_colaborador:.2f}')
+    print('Você teve um aumento de 5% em seu salário.')
+    valor_aumentado = salario_colaborador * (5 / 100)
+    print(f'Valor do aumento: {valor_aumentado:.2f}')
+    salario_colaborador = salario_colaborador + valor_aumentado
+    print(f'Novo salário após aumento: {salario_colaborador:.2f}')
+
