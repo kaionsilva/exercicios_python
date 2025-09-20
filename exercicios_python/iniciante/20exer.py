@@ -29,19 +29,61 @@ valor_horas = float(input('Digite o valor que você ganha por hora: '))
 horas_mes = int(input('Digite suas horas trabalhadas no mês: '))
 
 salario_bruto = valor_horas * horas_mes
+salario_liquido = salario_bruto
 
 if salario_bruto < 900:
-    salario_total = salario_bruto
     imposto_inss = salario_bruto * (10 / 100)
-    salario_bruto = salario_bruto - imposto_inss
     desconto_fgts = salario_bruto * (11 / 100)
-    salario_bruto = desconto_fgts - salario_bruto
-    total_desconto = imposto_inss + desconto_fgts
-    print(f'Salário Bruto: {salario_total:.2f}')
-    print('(-) IR (5%) -INSENTO-')
-    print(f'(-) INSS (10%) {imposto_inss:.2f}')
+    total_descontos = imposto_inss + desconto_fgts
+    salario_liquido = salario_bruto - total_descontos
+    print(f'Salario Bruto: {salario_bruto:.2f}')
+    print('--DESCONTOS--')
+    print('IR - Isento')
+    print(f'INSS (10%) {imposto_inss:.2f}')
     print(f'FGTS (11%) {desconto_fgts:.2f}')
-    print(f'Total de descontos: {total_desconto:.2f}')
-    print(f'Salário Liquido : {salario_bruto:.2f}')
+    print(f'Total de descontos: {total_descontos:.2f}')
+    print(f'Salário liquido: {salario_liquido:.2f}')
+
+elif salario_bruto > 900 and salario_bruto < 1500:
+    imposto_ir = salario_bruto * (5 / 100)
+    imposto_inss = salario_bruto * (10 / 100)
+    desconto_fgts = salario_bruto * (11 / 100)
+    total_descontos = imposto_inss + desconto_fgts + imposto_ir
+    salario_liquido = salario_bruto - total_descontos
+    print(f'Salario Bruto: {salario_bruto:.2f}')
+    print('--DESCONTOS--')
+    print(f'IR (5%) {imposto_ir:.2f}')
+    print(f'INSS (10%) {imposto_inss:.2f}')
+    print(f'FGTS (11%) {desconto_fgts:.2f}')
+    print(f'Total de descontos: {total_descontos:.2f}')
+    print(f'Salário liquido: {salario_liquido:.2f}')
+
+elif salario_bruto > 1500 and salario_bruto < 2500:
+    imposto_ir = salario_bruto * (10 / 100)
+    imposto_inss = salario_bruto * (10 / 100)
+    desconto_fgts = salario_bruto * (11 / 100)
+    total_descontos = imposto_inss + desconto_fgts + imposto_ir
+    salario_liquido = salario_bruto - total_descontos
+    print(f'Salario Bruto: {salario_bruto:.2f}')
+    print('--DESCONTOS--')
+    print(f'IR (10%) {imposto_ir:.2f}')
+    print(f'INSS (10%) {imposto_inss:.2f}')
+    print(f'FGTS (11%) {desconto_fgts:.2f}')
+    print(f'Total de descontos: {total_descontos:.2f}')
+    print(f'Salário liquido: {salario_liquido:.2f}')
+
+elif salario_bruto > 2500:
+    imposto_ir = salario_bruto * (20 / 100)
+    imposto_inss = salario_bruto * (10 / 100)
+    desconto_fgts = salario_bruto * (11 / 100)
+    total_descontos = imposto_inss + desconto_fgts + imposto_ir
+    salario_liquido = salario_bruto - total_descontos
+    print(f'Salario Bruto: {salario_bruto:.2f}')
+    print('--DESCONTOS--')
+    print(f'IR (20%) {imposto_ir:.2f}')
+    print(f'INSS (10%) {imposto_inss:.2f}')
+    print(f'FGTS (11%) {desconto_fgts:.2f}')
+    print(f'Total de descontos: {total_descontos:.2f}')
+    print(f'Salário liquido: {salario_liquido:.2f}')
+
     
-#não acabei a solução
