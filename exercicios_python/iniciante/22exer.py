@@ -14,3 +14,9 @@ Se a pessoa responder positivamente a 2 questões ela deve ser classificada
 como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
 Caso contrário, ele será classificado como "Inocente".
 """
+#Entrada do usuário é 'sim' / 'nao' / 'n' e 's'
+
+
+
+
+

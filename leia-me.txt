@@ -1,0 +1,37 @@
+1- liste os funcionarios
+SELECT f.nome, f.cargo, f.salario
+FROM funcionarios f
+JOIN departamentos d ON f.departamento_id = d.id
+WHERE d.nome = 'Desenvolvimento de Software';
+
+2- encontre projetos mais
+SELECT p.nome, p.data_inicio
+FROM projetos p
+WHERE p.funcionario_id = 101
+ORDER BY p.data_inicio DESC
+LIMIT 1;
+
+atualização de dados
+1- aumente o salario
+UPDATE funcionarios f
+SET salario = 5000
+WHERE f.departamento_id IN (
+    SELECT d.id
+    FROM departamentos d
+    WHERE d.nome = 'Marketing'
+);
+
+2- altere o nome do pro
+UPDATE projetos
+SET nome = 'Projeto Inovação 2024'
+WHERE id = 205;
+
+inserção de dados
+1- adicione um novo
+INSERT INTO funcionarios (nome, cargo, salario, departamento_id)
+VALUES ('Ana Souza', 'Analista de Dados', 4500, 3);
+
+exclusão de dados
+1- exclua todos os
+DELETE FROM projetos
+WHERE data_inicio < '2022-01-01';
